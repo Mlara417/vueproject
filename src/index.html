@@ -12,10 +12,50 @@
 
 <body>
   <div class="container">
-    <!-- Case 1 Goal Tracker -->
-    <div class="row text-center" id="goalApp">
+    <!-- Case 1 INTERPOLATION -->
+    <div id="interpolation-test" class="text-center mt-5">
+      <h1>Case 1: INTERPOLATION</h1>
+      <h2>{{ message }}</h2>
+    </div>
+    <!--End of Case 1 -->
+    <br>
+    <br>
+    <!--Case 2 V-BIND -->
+    <div class="row text-center mt-5" id="user-goal">
+      <div class="col-md-6 offset-md-3">
+        <h1>Case 2: V-BIND</h1>
+        <h2>User Goal</h2>
+        <h5>{{ outputGoal() }}</h5>
+        <p>Learn more about <a v-bind:href="link">Vue</a></p>
+      </div>
+    </div>
+    <!-- End of case 2 -->
+    <br>
+    <br>
+    <!-- Case 3 V-FOR-->
+    <div id="listItem" class="text-center mt-5">
+      <h1>Case 3: V-FOR</h1>
+      <ul>
+        <li v-for="task in tasks">{{ task }}</li>
+      </ul>
+    </div>
+    <!--End of Case 3 -->
+    <br>
+    <br>
+    <!-- Case 4 V-ON -->
+    <div id="clickTest" class="text-center mt-5">
+      <h1>Case 4: V-ON</h1>
+      <h3>{{ counter }}</h3>
+      <button id="test-button" class="btn btn-primary" v-on:click="clickButton">Increase Count</button>
+    </div>
+    <!--End of Case 4 -->
+    <br>
+    <br>
+    <!-- Case 5 V-MODEL -->
+    <div class="row text-center mt-5" id="goalApp">
       <div class="col-md-6 offset-md-3 form-group">
-        <label class="font-weight-bold" for="goal">Goal</label>
+        <h1>Case: V-MODEL</h1>
+        <label for="goal">Goal</label>
         <input class="form-control" type="text" id="goal" v-model="enteredValue">
         <button class="btn btn-primary" v-on:click="addGoal">Add Goal</button>
       </div>
@@ -23,18 +63,9 @@
         <li v-for="goal in goals">{{ goal }}</li>
       </ul>
     </div>
-    <!-- End of case 1 -->
-
-    <!-- Case 2 interpolation, v-bind -->
-    <div class="row text-center mt-5" id="user-goal">
-      <div class="col-md-6 offset-md-3">
-        <h2>User Goal</h2>
-        <h5>{{ userGoal }}</h5>
-        <p>Learn more about <a v-bind:href="link">Vue</a></p>
-      </div>
-    </div>
-    <!-- End of case 2 -->
-
+    <!-- End of case 5 -->
+    <br>
+    <br>
   </div>
   <!-- End of container -->
   <script src="https://unpkg.com/vue@next"></script>

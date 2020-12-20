@@ -1,0 +1,40 @@
+{
+  "name": "vueproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@vue/test-utils": "^1.1.2",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "vue": "^2.6.12",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "devDependencies": {
+    "@testing-library/vue": "^5.6.1",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mlara417/vueproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mlara417/vueproject/issues"
+  },
+  "homepage": "https://github.com/Mlara417/vueproject#readme"
+}
